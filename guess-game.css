@@ -1,0 +1,177 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --primairy-color:#f44336;
+    --background:#eee;
+    --bg1:#fff;
+    --correct:#f89e13;
+    --not-in-place:#18ba89;
+    --wrong:#27303f;
+    --footer:#462424;
+    --lightblack:#333;
+    --outline:#ccc;
+    --secondary-color:#009688
+}
+body{
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: var(--bg1);
+}
+
+.guess-game{
+    width: 1000px;
+    text-align: center;
+    margin: 0px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .game-area{
+        text-align: center;
+        .inputs{
+            > div{
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 30px;
+                    margin-right: 15px;
+                    font-weight: bold;
+                }
+            }
+            .disabled-inputs{
+                opacity: .5;
+                pointer-events: none;
+            }
+            input{
+                margin: 0 5px;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                font-size: 50px;
+                caret-color: var(--primairy-color);
+                background-color: var(--bg1);
+                border: none;
+                border-bottom: 3px solid var(--primairy-color);
+                &:focus{
+                    outline-color: var(--outline);
+                }
+                &.correct{
+                    background-color: var(--correct);
+                    border-color: var(--correct);
+                    color: var(--bg1);
+                }
+                &.correct-not-place{
+                    background-color: var(--not-in-place);
+                    border-color: var(--not-in-place);
+                    color: var(--bg1);
+                }
+                &.wrong{
+                    background-color: var(--wrong);
+                    border-color: var(--wrong);
+                    color: var(--bg1);
+                }
+            }
+        }
+        .control{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            margin: 30px auto;
+            gap: 10px;
+            button{
+                border: none;
+                font-size: 25px;
+                border-radius: 6px;
+                padding: 15px 6px;
+                color: var(--bg1);
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .check{
+                background-color: var(--primairy-color);
+                flex: 1;
+            }
+            .hint{
+                background-color:var(--secondary-color) ;
+                width: fit-content;
+            }
+            button:disabled{
+                background-color: var(--lightblack);
+                opacity: .4;
+                cursor: no-drop;
+            }
+        }
+    }
+
+    .key-colors{
+        h2{
+            margin-bottom: 30px;
+        }
+        .key-color{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: var(--bg1);
+            margin-bottom: 10px;
+            .key{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                &.correct{
+                    background-color: var(--correct);
+                }
+                &.correct-not-place{
+                    background-color: var(--not-in-place);
+                }
+                &.wrong{
+                    background-color: var(--wrong);
+                }
+            }
+            .key-text{
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+.message{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    span {
+        font-weight: bold;
+        display: block;
+        font-size: 50px;
+        color: var(--primairy-color);
+        text-transform: capitalize;
+        margin-top: 10px;
+    }
+    p{
+        margin-top: 15px;
+    }
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer);
+    color: var(--bg1);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+
+}
