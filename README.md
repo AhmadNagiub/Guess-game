@@ -20,9 +20,9 @@ Guess Game:
 
 ### Screenshot
 
-![](images/guess-game 1.PNG)
-![](./images/guess-game 2.PNG)
-![](./images/guess-game 3.PNG)
+![](./images/guess-game1.PNG)
+![](./images/guess-game2.PNG)
+![](./images/guess-game3.PNG)
 
 
 ### Built with
